@@ -1,44 +1,40 @@
-*.rbc
-capybara-*.html
-.rspec
-/log
-/tmp
-/db/*.sqlite3
-/db/*.sqlite3-journal
-/public/system
-/coverage/
-/spec/tmp
-*.orig
-rerun.txt
-pickle-email-*.html
+# temp files
+.DS_Store
+.tmp
+.sass-cache
 
-# TODO Comment out this rule if you are OK with secrets being uploaded to the repo
-config/initializers/secret_token.rb
+# npm & bower
+/node_modules/
+/app/bower_components/
 
-# Only include if you have production secrets in this file, which is no longer a Rails default
-# config/secrets.yml
+# custom gulp settings
+/gulp/.gulp_settings.json
 
-# dotenv
-# TODO Comment out this rule if environment variables can be committed
-.env
+# ionic fonts
+/app/main/assets/fonts/ionicons.*
 
-## Environment normalization:
-/.bundle
-/vendor/bundle
+# cordova
+/platforms/
+/plugins/
+/res/*/current/
 
-# these should all be checked in to normalize the environment:
-# Gemfile.lock, .ruby-version, .ruby-gemset
+# build folder
+/www/**
 
-# unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
-.rvmrc
+# IDE
+# sublime
+*.sublime-project
+*.sublime-workspace
 
-# if using bower-rails ignore default bower_components path bower.json files
-/vendor/assets/bower_components
-*.bowerrc
-bower.json
+# vscode
+/.vscode/
 
-# Ignore pow environment settings
-.powenv
+# webstorm
+/.idea/workspace.xml
+/.idea/libraries
 
-# Ignore Byebug command history file.
-.byebug_history
+# yarn
+yarn.lock
+
+# npm
+npm-debug.log
