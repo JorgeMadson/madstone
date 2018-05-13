@@ -1,14 +1,17 @@
 <ion-tabs class="tabs-icon-top tabs-positive">
 
+  <!-- Card Tab -->
+  <ion-tab title="Cartas" icon-off="ion-document" icon-on="ion-document-text" ui-sref="main.card">
+    <ion-nav-view name="card-list"></ion-nav-view>
+  </ion-tab>
+
   <!-- List Tab -->
-  <ion-tab title="List" icon-off="ion-ios-pulse" icon-on="ion-ios-pulse-strong"
-    ui-sref="main.list">
+  <ion-tab title="List" icon-off="ion-ios-pulse" icon-on="ion-ios-pulse-strong" ui-sref="main.list">
     <ion-nav-view name="tab-list"></ion-nav-view>
   </ion-tab>
 
   <!-- Debug Tab -->
-  <ion-tab title="Debug" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear"
-    ui-sref="main.debug">
+  <ion-tab title="Debug" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" ui-sref="main.debug">
     <ion-nav-view name="tab-debug"></ion-nav-view>
   </ion-tab>
 
