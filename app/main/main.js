@@ -21,7 +21,7 @@ angular.module('main', [
         views: {
           'card-list': {
             templateUrl: 'main/templates/card.html',
-            // controller: 'CardCtrl as ctrl'
+            controller: 'CardCtrl as ctrl'
           }
         }
       })

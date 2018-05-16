@@ -7,7 +7,8 @@
   "globals": {
     "angular": true,
     "ionic": true,
-    "localforage": true
+    "localforage": true,
+    "cordova": true
   },
   "rules": {
     "no-console": 1
