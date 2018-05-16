@@ -10,12 +10,8 @@
       <ion-item class="item item-icon">
         <img src="main/assets/images/logo.png">
       </ion-item>
-      <ion-item>
-        <p>Teste:</p>
-        {{teste}}
-        <p>response:</p>
-        {{response}}
-        <p>Tem que ajeitar o CORS</p>
+      <ion-item ng-repeat="card in response">
+        {{card.name}}
       </ion-item>
     </ion-list>
 

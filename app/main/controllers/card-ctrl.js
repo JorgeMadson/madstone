@@ -7,8 +7,8 @@ angular.module('main')
 
     $http.get('https://api.hearthstonejson.com/v1/24377/ptBR/cards.collectible.json')
       .then(function (response) {
-        $log.log(response);
-        $scope.response = response;
+        $log.log(response.data);
+        $scope.response = response.data;
       }.bind(this));
     $scope.teste  = teste;
   });
