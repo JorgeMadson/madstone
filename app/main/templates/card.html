@@ -8,7 +8,7 @@
         Cartas em ordem alfabetica
       </ion-item>
       {{apiCards.length}}
-      <ion-item ng-repeat="card in apiCards">
+      <ion-item ng-repeat="card in allCards">
       {{card.id}} <b>{{card.name}}</b> Custo: {{card.cost}} {{card.cardClass}}
       </ion-item>
     </ion-list>
