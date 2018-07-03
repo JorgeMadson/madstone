@@ -10,10 +10,22 @@
       <ion-item class="item item-icon">
         <img src="main/assets/images/logo.png">
       </ion-item>
-      <ion-item ng-repeat="card in response">
-        {{card.name}}
+      {{apiCards.length}}
+      <ion-item ng-repeat="card in apiCards">
+      {{card.id}} <b>{{card.name}}</b> Custo: {{card.cost}} {{card.cardClass}}
       </ion-item>
     </ion-list>
 
+
+    <ion-infinite-scroll 
+      oninfinite="loadMore()" 
+      distance="1%">
+    </ion-infinite-scroll>
+    <!-- <ion-infinite-scroll
+    ng-if="moreDataCanBeLoaded()"
+    icon="ion-loading-c"
+    on-infinite="loadMoreData()">
+
+    </ion-infinite-scroll> -->
   </ion-content>
 </ion-view>

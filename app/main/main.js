@@ -5,10 +5,12 @@ angular.module('main', [
   'ui.router',
   // TODO: load other modules selected during generation
 ])
-  .config(function ($stateProvider, $urlRouterProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+    //Essa linha deixa a tabs-bar embaixo
+    $ionicConfigProvider.tabs.position('bottom');
 
     // ROUTING with ui.router
-    $urlRouterProvider.otherwise('/main/list');
+    $urlRouterProvider.otherwise('/main/card');
     $stateProvider
       // this state is placed in the <ion-nav-view> in the index.html
       .state('main', {
