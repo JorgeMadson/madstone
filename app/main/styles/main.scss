@@ -25,3 +25,10 @@ $ionicons-font-path: "../assets/fonts" !default;
 
 // added via yo m-ionic:component subgenerator
 @import '../components/mini/mini-component';
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}

@@ -19,7 +19,7 @@
         Cartas em ordem alfabetica <span class="badge badge-assertive">{{allCards.length}}  </span>
       </ion-item>
       <div ng-repeat="card in allCards">
-        <a class="item" href="#">
+        <a class="item" href="#/main/card/:{{card.id}}">
           <b>{{card.name}}</b> Mana:{{card.cost}} {{card.attack}}/{{card.health}}
         <p ng-bind-html=card.text></p>
         </a>

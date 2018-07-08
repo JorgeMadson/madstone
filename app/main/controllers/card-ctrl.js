@@ -36,7 +36,7 @@ angular.module('main')
       var quantidade = $scope.allCards.length;
       var cartasParaAdicionar = $scope.apiResponse.slice(quantidade, quantidade + 100);
       $scope.allCards = $scope.allCards.concat(cartasParaAdicionar);
-      $scope.allCards.sort(porNome);
+      // $scope.allCards.sort(porNome);
       $log.log($scope.allCards.length);
       $log.log($scope.allCards);
       $scope.$broadcast('scroll.infiniteScrollComplete');

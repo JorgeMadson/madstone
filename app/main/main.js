@@ -27,6 +27,15 @@ angular.module('main', [
           }
         }
       })
+      .state('main.cardDetail', {
+        url: '/card/:cardId',
+        views: {
+          'card-list': {
+            templateUrl: 'main/templates/card-detail.html',
+            controller: 'Card-detailCtrl as ctrl'
+          }
+        }
+      })
       .state('main.list', {
         url: '/list',
         views: {
