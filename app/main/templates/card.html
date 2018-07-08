@@ -1,15 +1,29 @@
 <ion-view view-title="Todas as Cartas">
   <!-- do you want padding? -->
-  <ion-content class="padding">
-
+  <ion-nav-buttons side="primary">
+    <button class="button-icon icon light" ng-click="scrollTop()">
+        <i class="icon ion-arrow-up-c"></i>
+    </button>
+  </ion-nav-buttons>
+  <ion-content>
+    <!--Pesquisa de carta-->
+    <div class="item-input-inset">
+      <label class="item-input-wrapper search-input">
+        <i class="icon ion-ios-search placeholder-icon"></i>
+        <input ng-model="cartaPesquisada" type="search" class="input-full-width" placeholder="Pesquisar Carta">
+      </label>
+    </div>
     <!-- content goes here -->
     <ion-list>
       <ion-item class="item item-divider">
         Cartas em ordem alfabetica <span class="badge badge-assertive">{{allCards.length}}  </span>
       </ion-item>
-      <ion-item ng-repeat="card in allCards">
-      <b>{{card.name}}</b> Custo: {{card.cost}} {{card.cardClass}}
-      </ion-item>
+      <div ng-repeat="card in allCards">
+        <a class="item" href="#">
+          <b>{{card.name}}</b> Mana:{{card.cost}} {{card.attack}}/{{card.health}}
+        <p ng-bind-html=card.text></p>
+        </a>
+      </div>
     </ion-list>
 
     <ion-infinite-scroll

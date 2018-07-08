@@ -1,9 +1,11 @@
 'use strict';
 angular.module('main')
-  .controller('CardCtrl', function ($log, $http, Main, $scope, $localstorage) {
+  .controller('CardCtrl', function ($log, $http, Main, $scope, $localstorage, $ionicScrollDelegate) {
     $log.log('CardCtrl in module main, controller:', this);
 
-    $log.log($localstorage.getObject('cartasApi').length);
+    $scope.scrollTop = function () {
+      $ionicScrollDelegate.scrollTop();
+    };
 
     if (typeof $localstorage.getObject('cartasApi').length === 'undefined') {
       $http.get('https://api.hearthstonejson.com/v1/latest/ptBR/cards.collectible.json')
@@ -36,6 +38,7 @@ angular.module('main')
       $scope.allCards = $scope.allCards.concat(cartasParaAdicionar);
       $scope.allCards.sort(porNome);
       $log.log($scope.allCards.length);
+      $log.log($scope.allCards);
       $scope.$broadcast('scroll.infiniteScrollComplete');
     };
 
