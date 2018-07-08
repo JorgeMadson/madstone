@@ -1,28 +1,18 @@
-<ion-view view-title="Cartas">
+<ion-view view-title="Todas as Cartas">
   <!-- do you want padding? -->
   <ion-content class="padding">
 
     <!-- content goes here -->
     <ion-list>
       <ion-item class="item item-divider">
-        Cartas em ordem alfabetica
+        Cartas em ordem alfabetica <span class="badge badge-assertive">{{allCards.length}}  </span>
       </ion-item>
-      {{apiCards.length}}
       <ion-item ng-repeat="card in allCards">
-      {{card.id}} <b>{{card.name}}</b> Custo: {{card.cost}} {{card.cardClass}}
+      <b>{{card.name}}</b> Custo: {{card.cost}} {{card.cardClass}}
       </ion-item>
     </ion-list>
 
+    <button class="button button-positive" ng-click="carregarMais({{allCards.length}})">Carregar mais 100</button>
 
-    <ion-infinite-scroll 
-      oninfinite="loadMore()" 
-      distance="1%">
-    </ion-infinite-scroll>
-    <!-- <ion-infinite-scroll
-    ng-if="moreDataCanBeLoaded()"
-    icon="ion-loading-c"
-    on-infinite="loadMoreData()">
-
-    </ion-infinite-scroll> -->
   </ion-content>
 </ion-view>
