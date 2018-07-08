@@ -12,7 +12,10 @@
       </ion-item>
     </ion-list>
 
-    <button class="button button-positive" ng-click="carregarMais({{allCards.length}})">Carregar mais 100</button>
-
+    <ion-infinite-scroll
+    ng-if="temMais()"
+    icon="ion-loading-c"
+    on-infinite="carregaPorra()">
+    </ion-infinite-scroll>
   </ion-content>
 </ion-view>

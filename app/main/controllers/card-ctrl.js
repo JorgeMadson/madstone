@@ -4,18 +4,12 @@ angular.module('main')
     $log.log('CardCtrl in module main, controller:', this);
 
     $scope.allCards = [];
-    var cartasExibidas;
+    $scope.apiResponse = [];
     //Salvar cartas localmente pra que seja lido só uma vez.
     $http.get('https://api.hearthstonejson.com/v1/latest/ptBR/cards.collectible.json')
       .then(function (response) {
         $log.log(response.data);
         $scope.apiResponse = response.data;
-        cartasExibidas = response.data.slice(0, 50);
-        $scope.allCards = cartasExibidas;
-        // $scope.allCards = response.data;
-        $scope.allCards.sort(porNome);
-
-        // window.localstorage['cards']=JSON.stringify($scope.apiResponse);
       });
     function porNome (a, b) {
       if (a.name > b.name) {
@@ -27,10 +21,21 @@ angular.module('main')
       // a must be equal to b
       return 0;
     }
-    $scope.carregarMais = function () {
+
+    $scope.carregaPorra = function () {
+      $log.log('Carregou mais 100 cartas');
       var quantidade = $scope.allCards.length;
       var cartasParaAdicionar = $scope.apiResponse.slice(quantidade, quantidade + 100);
       $scope.allCards = $scope.allCards.concat(cartasParaAdicionar);
+      $scope.allCards.sort(porNome);
+      $log.log($scope.allCards.length);
+      $scope.$broadcast('scroll.infiniteScrollComplete');
+    };
 
+    $scope.temMais = function () {
+      if ($scope.allCards.length === $scope.apiResponse.length) {
+        return false;
+      }
+      return true;
     };
   });
