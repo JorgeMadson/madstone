@@ -32,3 +32,9 @@ $ionicons-font-path: "../assets/fonts" !default;
     margin-right: auto;
     width: 100%;
 }
+
+// Hack pra mostrar o loading dentro do infiniteScroll
+ion-infinite-scroll:not(.active) .spinner,
+ion-infinite-scroll:not(.active) .icon:before {
+    display: inline-block;
+}

@@ -7,6 +7,8 @@ angular.module('main')
       $ionicScrollDelegate.scrollTop();
     };
 
+    $scope.showInfinite = false;
+
     if (typeof $localstorage.getObject('cartasApi').length === 'undefined') {
       $http.get('https://api.hearthstonejson.com/v1/latest/ptBR/cards.collectible.json')
         .then(function (response) {
@@ -20,24 +22,24 @@ angular.module('main')
     $scope.allCards = [];
     $scope.apiResponse = $localstorage.getObject('cartasApi').length ? $localstorage.getObject('cartasApi') : [];
 
-    function porNome (a, b) {
-      if (a.name > b.name) {
-        return 1;
-      }
-      if (a.name < b.name) {
-        return -1;
-      }
-      // a must be equal to b
-      return 0;
-    }
+    // function porNome (a, b) {
+    //   if (a.name > b.name) {
+    //     return 1;
+    //   }
+    //   if (a.name < b.name) {
+    //     return -1;
+    //   }
+    //   // a must be equal to b
+    //   return 0;
+    // }
 
     $scope.carregaPorra = function () {
+    $scope.showInfinite = true;
       var quantidade = $scope.allCards.length;
-      var cartasParaAdicionar = $scope.apiResponse.slice(quantidade, quantidade + 25);
+      var cartasParaAdicionar = $scope.apiResponse.slice(quantidade, quantidade + 50);
       $scope.allCards = $scope.allCards.concat(cartasParaAdicionar);
       // $scope.allCards.sort(porNome);
       $log.log($scope.allCards.length);
-      $log.log($scope.allCards);
       $scope.$broadcast('scroll.infiniteScrollComplete');
     };
 
