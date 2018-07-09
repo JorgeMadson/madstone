@@ -13,13 +13,10 @@
       </label>
       <button class="button-icon icon" ng-click="cartaPesquisada=''" >Limpar</button>
     </div>
-    {{temMais() || (listaFiltrada.length <= 1)}}
-    <i class="ion-load-c"></i>
-    <i class="icon ion-ios-loop-strong spin big"></i>
     <!-- content goes here -->
     <ion-list>
       <ion-item class="item item-divider">
-        Por ordem de lancamento <span class="badge badge-assertive">{{listaFiltrada.length}}/{{apiResponse.length}}</span>
+        Por ordem de lançamento <span class="badge badge-assertive">{{listaFiltrada.length}}/{{allCards.length}}</span>
       </ion-item>
       <div ng-repeat="card in allCards | filter:{name:cartaPesquisada} as listaFiltrada" auto-list-divider auto-list-divider-value="{{card.name}}">
         <a class="item item-avatar" href="#/main/card/:{{card.id}}">
@@ -29,13 +26,13 @@
         </a>
       </div>
     </ion-list>
-    <div ng-if=" (listaFiltrada.length < 1)">
+    <div ng-if=" (listaFiltrada.length < 1) && listaFiltrada.length !== 1614">
       <button class="button button-block button-positive" ng-click="carregaPorra()">Carregar mais cartas</button>
     </div>
 
     <ion-infinite-scroll
     ng-show="showInfinite"
-    ng-if="temMais() || (listaFiltrada.length < 1)"
+    ng-if="temMais()"
     icon="icon ion-ios-loop-strong spin big"
     on-infinite="carregaPorra()">
     </ion-infinite-scroll>
