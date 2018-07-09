@@ -1,7 +1,7 @@
 <ion-view view-title="Todas as Cartas">
   <ion-nav-buttons side="secondary">
     <button class="button-icon icon light" ng-click="scrollTop()">
-        <i class="icon ion-arrow-up-c"></i>
+      <i class="icon ion-arrow-up-c"></i>
     </button>
   </ion-nav-buttons>
   <ion-content>
@@ -11,18 +11,19 @@
         <i class="icon ion-ios-search placeholder-icon"></i>
         <input ng-model="cartaPesquisada" type="search" class="input-full-width" placeholder="Pesquisar Carta">
       </label>
-      <button class="button-icon icon" ng-click="cartaPesquisada=''" >Limpar</button>
+      <button class="button-icon icon" ng-click="cartaPesquisada=''">Limpar</button>
     </div>
     <!-- content goes here -->
     <ion-list>
       <ion-item class="item item-divider">
-        Por ordem de lançamento <span class="badge badge-assertive">{{listaFiltrada.length}}/{{allCards.length}}</span>
+        Por ordem de lançamento
+        <span class="badge badge-assertive">{{listaFiltrada.length}}/{{allCards.length}}</span>
       </ion-item>
       <div ng-repeat="card in allCards | filter:{name:cartaPesquisada} as listaFiltrada" auto-list-divider auto-list-divider-value="{{card.name}}">
         <a class="item item-avatar" href="#/main/card/:{{card.id}}">
           <img src="https://art.hearthstonejson.com/v1/256x/{{card.id}}.jpg">
           <b>{{card.name}}</b> Mana:{{card.cost}} {{card.attack}}/{{card.health}}
-        <p ng-bind-html=card.text></p>
+          <p ng-bind-html=card.text></p>
         </a>
       </div>
     </ion-list>
@@ -30,11 +31,7 @@
       <button class="button button-block button-positive" ng-click="carregaPorra()">Carregar mais cartas</button>
     </div>
 
-    <ion-infinite-scroll
-    ng-show="showInfinite"
-    ng-if="temMais()"
-    icon="icon ion-ios-loop-strong spin big"
-    on-infinite="carregaPorra()">
+    <ion-infinite-scroll ng-show="showInfinite" ng-if="temMais()" icon="icon ion-ios-loop-strong spin big" on-infinite="carregaPorra()">
     </ion-infinite-scroll>
   </ion-content>
 </ion-view>
