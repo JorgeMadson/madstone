@@ -1,6 +1,5 @@
 <ion-view view-title="Todas as Cartas">
-  <!-- do you want padding? -->
-  <ion-nav-buttons side="primary">
+  <ion-nav-buttons side="secondary">
     <button class="button-icon icon light" ng-click="scrollTop()">
         <i class="icon ion-arrow-up-c"></i>
     </button>
@@ -16,10 +15,11 @@
     <!-- content goes here -->
     <ion-list>
       <ion-item class="item item-divider">
-        Cartas em ordem alfabetica <span class="badge badge-assertive">{{allCards.length}}  </span>
+        Por ordem de lancamento <span class="badge badge-assertive">{{apiResponse.length}}  </span>
       </ion-item>
       <div ng-repeat="card in allCards">
-        <a class="item" href="#/main/card/:{{card.id}}">
+        <a class="item item-avatar" href="#/main/card/:{{card.id}}">
+          <img src="https://art.hearthstonejson.com/v1/256x/{{card.id}}.webp">
           <b>{{card.name}}</b> Mana:{{card.cost}} {{card.attack}}/{{card.health}}
         <p ng-bind-html=card.text></p>
         </a>

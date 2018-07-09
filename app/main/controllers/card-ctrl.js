@@ -32,9 +32,8 @@ angular.module('main')
     }
 
     $scope.carregaPorra = function () {
-      $log.log('Carregou mais 100 cartas');
       var quantidade = $scope.allCards.length;
-      var cartasParaAdicionar = $scope.apiResponse.slice(quantidade, quantidade + 100);
+      var cartasParaAdicionar = $scope.apiResponse.slice(quantidade, quantidade + 25);
       $scope.allCards = $scope.allCards.concat(cartasParaAdicionar);
       // $scope.allCards.sort(porNome);
       $log.log($scope.allCards.length);

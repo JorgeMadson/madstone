@@ -1,15 +1,28 @@
 <ion-view view-title="Carta">
   <!-- do you want padding? -->
+  <ion-nav-buttons side="secondary">
+      <a href="#" class="item-icon-left light">
+          <i class="icon ion-home"></i>
+        </a>
+    </ion-nav-buttons>
   <ion-content class="padding">
 
     <!-- content goes here -->
     <ion-list>
       <ion-item class="item item-divider">
-        Nome da carta {{cardId}}
+        <code>{{carta.id}}</code> {{carta.name}}
       </ion-item>
-      <ion-item class="item item-icon">
-        <img class="center" src="https://art.hearthstonejson.com/v1/render/latest/ptBR/512x/{{cardId}}.png">
+      <ion-item class="item">
+        <img class="full-image" src="https://art.hearthstonejson.com/v1/render/latest/ptBR/512x/{{carta.id}}.png">
       </ion-item>
+      <div class="item item-text-wrap">{{carta.flavor}}</div>
+      <div class="item item-text-wrap"><h4>Classe:</h4> {{carta.cardClass}}</div>
+      <div class="item item-text-wrap"><h4>Tipo:</h4> {{carta.type}}</div>
+      <div class="item item-text-wrap"><h4>Raridade:</h4> {{carta.rarity}}</div>
+      <div class="item item-text-wrap"><h4>Artista:</h4> {{carta.artist}}</div>
+      <div class="item item-text-wrap"><h4>Custo:</h4> {{carta.cost}}</div>
+      <div class="item item-text-wrap"><h4>Texto:</h4> <div ng-bind-html="carta.text"></div></div>
+      <div class="item item-text-wrap"><h4>Coleção:</h4> {{carta.set}}</div>
     </ion-list>
 
   </ion-content>
