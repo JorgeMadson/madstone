@@ -45,12 +45,12 @@ angular.module('main', [
           }
         }
       })
-      .state('main.debug', {
-        url: '/debug',
+      .state('main.aventura', {
+        url: '/aventura',
         views: {
-          'tab-debug': {
-            templateUrl: 'main/templates/debug.html',
-            controller: 'DebugCtrl as ctrl'
+          'tab-aventura': {
+            templateUrl: 'main/templates/aventura.html',
+            controller: 'AventuraCtrl as ctrl'
           }
         }
       });

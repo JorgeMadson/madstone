@@ -1,8 +1,9 @@
 'use strict';
+'es6';
 angular.module('main')
-.controller('DebugCtrl', function ($log, $scope, $localstorage) {
+.controller('AventuraCtrl', function ($log, $scope, $localstorage) {
 
-  $log.log('Hello from your Controller: DebugCtrl in module main:. This is your controller:', this);
+  $log.log('Hello from your Controller: AventuraCtrl in module main:. This is your controller:', this);
 
   var cartas = $localstorage.getObject('cartasApi');
   // $log.log(cartas);
