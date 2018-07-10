@@ -16,22 +16,24 @@
     <!-- content goes here -->
     <ion-list>
       <ion-item class="item item-divider">
-        Por ordem de lançamento
-        <span class="badge badge-assertive">{{listaFiltrada.length}}/{{allCards.length}}</span>
+        Por ordem de alfabética
+        <span class="badge badge-assertive">{{apiResponse.length}}</span>
       </ion-item>
-      <div ng-repeat="card in allCards | filter:{name:cartaPesquisada} as listaFiltrada" auto-list-divider auto-list-divider-value="{{card.name}}">
+      <div collection-repeat="card in apiResponse | filter:{name:cartaPesquisada} | orderBy:'name'">
         <a class="item item-avatar" href="#/main/card/:{{card.id}}">
           <img src="https://art.hearthstonejson.com/v1/256x/{{card.id}}.jpg">
-          <b>{{card.name}}</b> Mana:{{card.cost}} {{card.attack}}/{{card.health}}
+          <b>{{card.name}}</b> Mana:{{card.cost}} {{card.attack}}<i ng-if="card.attack">/</i>{{card.health}}
           <p ng-bind-html=card.text></p>
         </a>
       </div>
     </ion-list>
-    <div ng-if=" (listaFiltrada.length < 1) && listaFiltrada.length !== 1614">
+    <!-- 
+      Botao carregar mais
+      <div ng-if=" (listaFiltrada.length < 1) && listaFiltrada.length !== 1614">
       <button class="button button-block button-positive" ng-click="carregaPorra()">Carregar mais cartas</button>
     </div>
 
     <ion-infinite-scroll ng-show="showInfinite" ng-if="temMais()" icon="icon ion-ios-loop-strong spin big" on-infinite="carregaPorra()">
-    </ion-infinite-scroll>
+    </ion-infinite-scroll> -->
   </ion-content>
 </ion-view>

@@ -7,19 +7,17 @@ angular.module('main')
       $ionicScrollDelegate.scrollTop();
     };
 
-    $scope.showInfinite = false;
+    // $scope.showInfinite = false;
 
     if (typeof $localstorage.getObject('cartasApi').length === 'undefined') {
       $http.get('https://api.hearthstonejson.com/v1/latest/ptBR/cards.collectible.json')
         .then(function (response) {
-          $log.log('pegou o json da api');
-          $log.log(response);
           $scope.apiResponse = response.data;
           $localstorage.setObject('cartasApi', $scope.apiResponse);
         });
     }
 
-    $scope.allCards = [];
+    // $scope.allCards = [];
     $scope.apiResponse = $localstorage.getObject('cartasApi').length ? $localstorage.getObject('cartasApi') : [];
 
     // function porNome (a, b) {
@@ -33,20 +31,21 @@ angular.module('main')
     //   return 0;
     // }
 
-    $scope.carregaPorra = function () {
-    $scope.showInfinite = true;
-      var quantidade = $scope.allCards.length;
-      var cartasParaAdicionar = $scope.apiResponse.slice(quantidade, quantidade + 50);
-      $scope.allCards = $scope.allCards.concat(cartasParaAdicionar);
-      // $scope.allCards.sort(porNome);
-      $log.log($scope.allCards.length);
-      $scope.$broadcast('scroll.infiniteScrollComplete');
-    };
+    // === Infinite Scroll desnecessario por causa do collection-repeat
+    // $scope.carregaPorra = function () {
+    // $scope.showInfinite = true;
+    //   var quantidade = $scope.allCards.length;
+    //   var cartasParaAdicionar = $scope.apiResponse.slice(quantidade, quantidade + 50);
+    //   $scope.allCards = $scope.allCards.concat(cartasParaAdicionar);
+    //   // $scope.allCards.sort(porNome);
+    //   $log.log($scope.allCards.length);
+    //   $scope.$broadcast('scroll.infiniteScrollComplete');
+    // };
 
-    $scope.temMais = function () {
-      if ($scope.allCards.length === $scope.apiResponse.length) {
-        return false;
-      }
-      return true;
-    };
+    // $scope.temMais = function () {
+    //   if ($scope.allCards.length === $scope.apiResponse.length) {
+    //     return false;
+    //   }
+    //   return true;
+    // };
   });
