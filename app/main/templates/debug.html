@@ -1,12 +1,72 @@
-<ion-view view-title="Expansoes">
+<ion-view view-title="Expansões e Aventuras">
   <!-- do you want padding? -->
   <ion-content class="padding">
 
     <!-- content goes here -->
     <ion-list>
 
-      <ion-item class="item item-text-wrap" ng-repeat="exp in expancoes"> 
-        {{exp}}
+      <ion-item class="list" ng-repeat="exp in expancoes">
+
+        <div class="item-body" ng-if="exp == 'TGT'">
+          <img class="full-image" src="https://d2q63o9r0h0ohi.cloudfront.net/images/the-grand-tournament/pt-br/logo-7af7fb9ac912038f48c3dc091e74f315bd6d04b228d4acbd38d195cf7566c94454cba1c70d4660c4afa9a9adc37442a5cc45b0b33bb4ebdb8401cb9803549e7b.png">
+          <h2>O Grande Torneio</h2>Codenome: {{exp}}
+        </div>
+        <div class="item-body" ng-if="exp == 'BRM'">
+          <img class="full-image" src="https://d2q63o9r0h0ohi.cloudfront.net/images/blackrock-mountain/pt-br/logo-22d30185d72cde84556d12d1e45621c73418c55ba766b07e6c923caff1cbd7ee53d96a87aa31ce182b092d7ce1cc2486eea52e3fbe8716f0fbdbd281a9acd2ce.png">
+          <h2>Montanha Rocha Negra</h2>Codenome: {{exp}}
+        </div>
+        <div class="item-body" ng-if="exp == 'GANGS'">
+          <img class="full-image" src="https://d2q63o9r0h0ohi.cloudfront.net/images/mean-streets-of-gadgetzan/pt-br/logo-7284698eb32d5b52b09584cbd18c251bd0396ca3668479bb9f70018da996cf8d475fb3b45983c5ec4809ef86a465c04e51295cbcff013d107069828b2ab4c6aa.png">
+          <h2>As Gangues de Geringontzan</h2>Codenome: {{exp}}
+        </div>
+        <div class="item-body" ng-if="exp == 'CORE'">
+          <img class="full-image" src="https://blznav.akamaized.net/img/games/cards/card-hearthstone-e9fe5d89ddb0ae23.jpg">
+          <h2>Básicas</h2>Codenome: {{exp}}
+        </div>
+        <div class="item-body" ng-if="exp == 'EXPERT1'">
+          <img class="full-image" src="https://blznav.akamaized.net/img/games/cards/card-hearthstone-e9fe5d89ddb0ae23.jpg">
+          <h2>Clássicas</h2>Codenome: {{exp}}
+        </div>
+        <div class="item-body" ng-if="exp == 'HOF'">
+          <img class="full-image" src="https://blznav.akamaized.net/img/games/cards/card-hearthstone-e9fe5d89ddb0ae23.jpg">
+          <h2>Hall da Fama</h2>Codenome: {{exp}}
+        </div>
+        <div class="item-body" ng-if="exp == 'NAXX'">
+          <img class="full-image" src="https://d2q63o9r0h0ohi.cloudfront.net/images/naxxramas/pt-br/logo-06e1ee2717dc7c64dfa640acc978766f09fc845989d73103fe9afaccc37341acaa90617d262a83dde6b027525ab6c3c49f90b332c02009cc063cc0bf9859ed0b.png">
+          <h2>Maldição de Naxxramas</h2>Codenome: {{exp}}
+        </div>
+        <div class="item-body" ng-if="exp == 'GILNEAS'">
+          <img class="full-image" src="https://d2q63o9r0h0ohi.cloudfront.net/images/the-witchwood/pt-br/logo-3fc0d9e92193bc8d9379e8783eae0b505bf2f5f6878bb0c745bbdbf1c569f8cb364d5b1f8d829c78042415a40d6bf75a59e200eb9f71ece2f873f1d6fcde2428.png">
+          <h2>Bosque das Bruxas</h2>Codenome: {{exp}}
+        </div>
+        <div class="item-body" ng-if="exp == 'GVG'">
+          <img class="full-image" src="https://d2q63o9r0h0ohi.cloudfront.net/images/goblins-vs-gnomes/pt-br/logo-69a671524b3e528a1a91865b7f3eb1761c1919a447dbbe9e4f790fd475f99a8e881be091973f7d66502183ad79f9d1d2aab9b4db0de410412d63799c17a1aac3.png">
+          <h2>Goblins vs. Gnomos</h2>Codenome: {{exp}}
+        </div>
+        <div class="item-body" ng-if="exp == 'ICECROWN'">
+          <img class="full-image" src="https://d2q63o9r0h0ohi.cloudfront.net/images/knights-of-the-frozen-throne/pt-br/logo-e6c2437bdb5e7a9231a45c434edcfe3a4a97fc10a14bab102356bf715f7844a8729086f1a85d57881bcf0058cd85b91801490947736ed5309a92d7b08b47c700.png">
+          <h2>Cavaleiros do Trono de Gelo</h2>Codenome: {{exp}}
+        </div>
+        <div class="item-body" ng-if="exp == 'KARA'">
+            <img class="full-image" src="https://d2q63o9r0h0ohi.cloudfront.net/images/one-night-in-karazhan/pt-br/logo-caa11b96065b6d6cf34716e4270522b1c7abf20e7b4dfdc16b5c2bfab6c1355e97249a1425ea365aefa4bfabe6d900a8d4d51507002a881f60fa4de3d28f7c4a.png">
+            <h2>Uma Noite em Karazhan</h2>Codenome: {{exp}}
+        </div>
+        <div class="item-body" ng-if="exp == 'LOE'">
+            <img class="full-image" src="https://d2q63o9r0h0ohi.cloudfront.net/images/league-of-explorers/pt-br/logo-43c321b225b4ab98708d6eb72dd7e3c4fe083966a18b06934a0b04a7a8b974cf9d7b9f78db246549b128807cc5dd3a8b07c9d85f1728a45f51147a0603056d3a.png">
+            <h2>Liga dos Exploradores</h2>Codenome: {{exp}}
+        </div>
+        <div class="item-body" ng-if="exp == 'LOOTAPALOOZA'">
+            <img class="full-image" src="https://d2q63o9r0h0ohi.cloudfront.net/images/kobolds-and-catacombs/pt-br/logo-eac29b5841aa1ab251bbe0619ddc1b4f5ba4cdf46b7626798d735a85581dc32d79cdfe187c26587973b15d6dc5c0cb09a7aefa23d24c5e6196488dfdfdc5c82f.png">
+            <h2>Kobolds & Catacumbas</h2>Codenome: {{exp}}
+        </div>
+        <div class="item-body" ng-if="exp == 'OG'">
+            <img class="full-image" src="https://d2q63o9r0h0ohi.cloudfront.net/images/whispers-of-the-old-gods/pt-br/logo-aeb255314e44b6f9fd04153835c28b4924079e4cabe295c41dcf3f6122b8c5ea63d034d0b62bab6859b004d5acc8c4d35a7244fb9657d0a35aeb0818560d8da8.png">
+            <h2>Sussurros dos Deuses Antigos</h2>Codenome: {{exp}}
+        </div>
+        <div class="item-body" ng-if="exp == 'UNGORO'">
+            <img class="full-image" src="https://d2q63o9r0h0ohi.cloudfront.net/images/journey-to-ungoro/pt-br/logo-4471b8d4dd6c0ca4977fae9b7e44b6a0cc9bcc692b9dc6e66f0e3f2257fd05d911ba7b69117d1fb69e307237933b006cff24096a08affcfb960ac81bc18b207d.png">
+            <h2>Jornada a Un'Goro</h2>Codenome: {{exp}}
+        </div>
       </ion-item>
     </ion-list>
 
