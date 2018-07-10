@@ -36,20 +36,11 @@ angular.module('main', [
           }
         }
       })
-      .state('main.list', {
-        url: '/list',
+      .state('main.classes', {
+        url: '/classes',
         views: {
-          'tab-list': {
-            templateUrl: 'main/templates/list.html',
-            // controller: 'SomeCtrl as ctrl'
-          }
-        }
-      })
-      .state('main.listDetail', {
-        url: '/list/detail',
-        views: {
-          'tab-list': {
-            templateUrl: 'main/templates/list-detail.html',
+          'tab-classes': {
+            templateUrl: 'main/templates/classes.html',
             // controller: 'SomeCtrl as ctrl'
           }
         }
