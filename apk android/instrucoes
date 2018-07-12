@@ -1,0 +1,25 @@
+**Gerar o apk:**
+
+## Android
+
+1. Dentro do app/mobile
+
+gulp --cordova "build android -- release" --force-build
+
+2. Isso gera o APK na pasta:
+
+/app/mobile/platforms/android/build/outputs/android-release-unsigned.apk
+
+3. Cole na pasta o  arquivo keystore e o programa zipalign
+
+4. Assinando o app:
+
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore socialwave.keystore android-release-unsigned.apk madstone
+
+5. Por a senha do keystore (aquela que peguei do maxsuel)
+
+6. Compactando o app
+
+chmod +x zipalign
+
+./zipalign -v 4 android-release-unsigned.apk SocialWave.apk
