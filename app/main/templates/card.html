@@ -26,6 +26,7 @@
         Por ordem de alfabética
         <span class="badge badge-dark">{{todasAsCartas.length}}</span>
       </ion-item>
+      <h1 ng-if="!todasAsCartas.length">Carregando cartas...</h1>
       <div collection-repeat="card in todasAsCartas | filter:{name:cartaPesquisada} | orderBy:'name'">
         <a class="item item-avatar {{card.rarity}}" href="#/main/card/:{{card.id}}">
           <img src="https://art.hearthstonejson.com/v1/256x/{{card.id}}.jpg">

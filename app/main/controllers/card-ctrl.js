@@ -17,15 +17,16 @@ angular.module('main')
       $scope.filtroAtivado = !$scope.filtroAtivado;
     };
     // $scope.showInfinite = false;
-
+    
     if (typeof $localstorage.getObject('cartasApi').length === 'undefined') {
       $http.get('https://api.hearthstonejson.com/v1/latest/ptBR/cards.collectible.json')
         .then(function (response) {
           $scope.apiResponse = response.data;
           $localstorage.setObject('cartasApi', $scope.apiResponse);
+          $scope.limpar();
         });
     }
-
+    
     // $scope.allCards = [];
     $scope.apiResponse = $localstorage.getObject('cartasApi').length ? $localstorage.getObject('cartasApi') : [];
 
