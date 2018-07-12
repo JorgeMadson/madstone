@@ -6,7 +6,7 @@ angular.module('main')
     $scope.scrollTop = function () {
       $ionicScrollDelegate.scrollTop();
     };
-
+    
     // $scope.showInfinite = false;
 
     if (typeof $localstorage.getObject('cartasApi').length === 'undefined') {
@@ -19,6 +19,13 @@ angular.module('main')
 
     // $scope.allCards = [];
     $scope.apiResponse = $localstorage.getObject('cartasApi').length ? $localstorage.getObject('cartasApi') : [];
+    
+    $scope.cardSet = [];
+    var todasAsExpansoes = [];
+    for (var i = 0; i < $scope.apiResponse.length; i++) {
+      todasAsExpansoes.push($scope.apiResponse[i].set);
+    }
+    $scope.cardSet = Array.from(new Set(todasAsExpansoes));
 
     // function porNome (a, b) {
     //   if (a.name > b.name) {

@@ -20,7 +20,7 @@
         <span class="badge badge-assertive">{{apiResponse.length}}</span>
       </ion-item>
       <div collection-repeat="card in apiResponse | filter:{name:cartaPesquisada} | orderBy:'name'">
-        <a class="item item-avatar" href="#/main/card/:{{card.id}}">
+        <a class="item item-avatar {{card.rarity}}" href="#/main/card/:{{card.id}}">
           <img src="https://art.hearthstonejson.com/v1/256x/{{card.id}}.jpg">
           <b>{{card.name}}</b> Mana:{{card.cost}} {{card.attack}}<i ng-if="card.attack">/</i>{{card.health}}
           <p ng-bind-html=card.text></p>
