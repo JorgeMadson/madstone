@@ -13,10 +13,10 @@ angular.module('main')
       $scope.cartaPesquisada = '';
       $scope.todasAsCartas = $scope.apiResponse;
       $scope.filtroAtivado = false;
-    }
+    };
     $scope.mostrarFiltro = function () {
       $scope.filtroAtivado = !$scope.filtroAtivado;
-    }
+    };
     // $scope.showInfinite = false;
 
     if (typeof $localstorage.getObject('cartasApi').length === 'undefined') {
@@ -54,7 +54,7 @@ angular.module('main')
         $scope.todasAsCartas = cartasDoSet;
       }
       filtradoPor = set;
-    }
+    };
 
     // function porNome (a, b) {
     //   if (a.name > b.name) {

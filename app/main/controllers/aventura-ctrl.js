@@ -7,7 +7,7 @@ angular.module('main')
 
   var cartas = $localstorage.getObject('cartasApi');
   // $log.log(cartas);
-  $scope.expancoes = [...new Set(cartas.map(carta => carta.set))];
+  $scope.expancoes = Array.from(new Set(cartas.map(carta => carta.set)));
   $scope.selecExpansao = $scope.expancoes[0];
 
   $log.log($scope.expancoes);
