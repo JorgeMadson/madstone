@@ -14,7 +14,7 @@
         <i class="icon ion-ios-search placeholder-icon"></i>
         <input ng-model="cartaPesquisada" type="search" class="input-full-width" placeholder="Pesquisar Carta">
       </label>
-      <button class="button-icon icon" ng-click="limpar()">Limpar</button>
+      <button class="button-icon icon" ng-click="cartaPesquisada='';limpar()">Limpar</button>
     </div>
     <!-- Filtro de carta -->
     <ion-list ng-if="filtroAtivado">

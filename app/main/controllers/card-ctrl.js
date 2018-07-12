@@ -10,7 +10,6 @@ angular.module('main')
     var filtradoPor = '';
 
     $scope.limpar = function () {
-      $scope.cartaPesquisada = '';
       $scope.todasAsCartas = $scope.apiResponse;
       $scope.filtroAtivado = false;
     };
