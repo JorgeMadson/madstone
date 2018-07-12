@@ -6,7 +6,11 @@ angular.module('main')
     $scope.scrollTop = function () {
       $ionicScrollDelegate.scrollTop();
     };
+    $scope.filtroAtivado = false;
     
+    $scope.filtrar = function(){
+      $scope.filtroAtivado = !$scope.filtroAtivado;
+    }
     // $scope.showInfinite = false;
 
     if (typeof $localstorage.getObject('cartasApi').length === 'undefined') {

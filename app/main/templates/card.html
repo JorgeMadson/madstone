@@ -1,5 +1,8 @@
 <ion-view view-title="Todas as Cartas">
   <ion-nav-buttons side="secondary">
+    <button class="button-icon icon light" ng-click="filtrar()">
+      <i class="icon ion-funnel"></i>
+    </button>
     <button class="button-icon icon light" ng-click="scrollTop()">
       <i class="icon ion-arrow-up-c"></i>
     </button>
@@ -14,7 +17,7 @@
       <button class="button-icon icon" ng-click="cartaPesquisada=''">Limpar</button>
     </div>
     <!-- content goes here -->
-    <ion-list>
+    <ion-list ng-show="filtroAtivado">
       <ion-item class="item item-divider">Filtrar Cartas por expansao</ion-item>
       <ion-item style=" display: inline-block; padding: 5px; margin: 5px;" ng-repeat="set in cardSet">{{set}}</ion-item>
     </ion-list>
