@@ -36,6 +36,11 @@ a.COMMON {
     border-left: 5px solid $COMMON !important;
 }
 
+.filtro {
+    display: inline-block !important; 
+    padding: 5px; margin: 5px !important;
+}
+
 // The path for our ionicons font files, relative to the built & temporary main.css
 $ionicons-font-path: "../assets/fonts" !default;
 

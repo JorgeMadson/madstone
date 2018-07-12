@@ -7,8 +7,14 @@ angular.module('main')
       $ionicScrollDelegate.scrollTop();
     };
     $scope.filtroAtivado = false;
-    
-    $scope.filtrar = function(){
+    var filtradoPor = '';
+
+    $scope.limpar = function () {
+      $scope.cartaPesquisada = '';
+      $scope.todasAsCartas = $scope.apiResponse;
+      $scope.filtroAtivado = false;
+    }
+    $scope.mostrarFiltro = function () {
       $scope.filtroAtivado = !$scope.filtroAtivado;
     }
     // $scope.showInfinite = false;
@@ -23,13 +29,32 @@ angular.module('main')
 
     // $scope.allCards = [];
     $scope.apiResponse = $localstorage.getObject('cartasApi').length ? $localstorage.getObject('cartasApi') : [];
-    
+
+    $scope.todasAsCartas = $scope.apiResponse;
+
     $scope.cardSet = [];
     var todasAsExpansoes = [];
-    for (var i = 0; i < $scope.apiResponse.length; i++) {
-      todasAsExpansoes.push($scope.apiResponse[i].set);
+    for (var i = 0; i < $scope.todasAsCartas.length; i++) {
+      todasAsExpansoes.push($scope.todasAsCartas[i].set);
     }
     $scope.cardSet = Array.from(new Set(todasAsExpansoes));
+
+    $scope.filtrar = function (set) {
+
+      if (set === filtradoPor) {
+        $scope.todasAsCartas = $scope.apiResponse;
+      }
+      else {
+        var cartasDoSet = [];
+        for (var i = 0; i < $scope.apiResponse.length; i++) {
+          if ($scope.apiResponse[i].set === set) {
+            cartasDoSet.push($scope.apiResponse[i]);
+          }
+        }
+        $scope.todasAsCartas = cartasDoSet;
+      }
+      filtradoPor = set;
+    }
 
     // function porNome (a, b) {
     //   if (a.name > b.name) {
@@ -46,7 +71,7 @@ angular.module('main')
     // $scope.carregaPorra = function () {
     // $scope.showInfinite = true;
     //   var quantidade = $scope.allCards.length;
-    //   var cartasParaAdicionar = $scope.apiResponse.slice(quantidade, quantidade + 50);
+    //   var cartasParaAdicionar = $scope.todasAsCartas.slice(quantidade, quantidade + 50);
     //   $scope.allCards = $scope.allCards.concat(cartasParaAdicionar);
     //   // $scope.allCards.sort(porNome);
     //   $log.log($scope.allCards.length);
@@ -54,7 +79,7 @@ angular.module('main')
     // };
 
     // $scope.temMais = function () {
-    //   if ($scope.allCards.length === $scope.apiResponse.length) {
+    //   if ($scope.allCards.length === $scope.todasAsCartas.length) {
     //     return false;
     //   }
     //   return true;
