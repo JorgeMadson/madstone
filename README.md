@@ -1,7 +1,11 @@
 # MadStone
+
+Download [](https://play.google.com/store/apps/details?id=com.jorge.madstone)
+
+
 This project was generated with Generator-M-Ionic v1.12.0. For more info visit the [repository](https://github.com/mwaylabs/generator-m-ionic) or check out the README below.
 
-# Generator-M-Ionic v1.12.0
+## Generator-M-Ionic v1.12.0
 
 [![NPM version](http://img.shields.io/npm/v/generator-m-ionic.svg?style=flat-square)][npm-url]
 [![Coverage Status](http://img.shields.io/coveralls/mwaylabs/generator-m-ionic/master.svg?style=flat-square)][coveralls-url]
@@ -22,8 +26,8 @@ Development:
 [![Greenkeeper badge](https://badges.greenkeeper.io/mwaylabs/generator-m-ionic.svg)](https://greenkeeper.io/)
 
 
-## Why you need it
-#### Note on Angular 2 & Ionic 2:
+### Why you need it
+##### Note on Angular 2 & Ionic 2:
 This Generator delivers **highly advanced workflows for Angular 1 & Ionic 1** with the latest Cordova. If you are looking for a version for Angular 2 & Ionic 2, we're working on one but progress is slow for [various reasons](https://github.com/mwaylabs/generator-m-ionic/issues/403#issuecomment-268562372). Meanwhile, we are still solidly committed to maintaining and rolling updates for the Angular 1 & Ionic 1 stack. Everybody looking to [get involved](https://github.com/mwaylabs/generator-m-ionic/issues/465) in either topic is very welcome!
 <p align="center">
   <a href="https://github.com/mwaylabs/generator-m-ionic" alt="Generator-M-Ionic">
@@ -35,7 +39,7 @@ This Generator delivers **highly advanced workflows for Angular 1 & Ionic 1** wi
 
 **[Read more ... ](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/intro/why_you_need_it.md)**
 
-### What's in the box
+#### What's in the box
 <br>
 <br>
 <p align="center" >
@@ -101,16 +105,16 @@ This Generator delivers **highly advanced workflows for Angular 1 & Ionic 1** wi
   - [Part 2: Mountain](http://blog.ionic.io/advanced-workflows-for-building-rock-solid-ionic-apps-part-2/)
   - [Part 3: Orbit](http://blog.ionic.io/advanced-workflows-for-building-rock-solid-ionic-apps-part-3/)
 
-## Guides
-##### Quick Start
+### Guides
+###### Quick Start
 - [Quick Start](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/intro/quick_start.md) for the experienced developer.
 - [Try the demo](https://github.com/mwaylabs/generator-m-ionic-demo). Get a quick impression by cloning the sample project generated with the latest version of Generator-M-Ionic.
 
-##### Setup
+###### Setup
 - [Installation and Prerequisites](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/installation_prerequisites.md)
 - [Questions](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/questions.md) the generator will ask and what they mean
 
-##### Basics
+###### Basics
 - [Development Introduction](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/development_intro.md)
 - [File structure](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/file_structure.md)
 - [Sub-generators](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/sub_generators.md) for adding new components.
@@ -119,29 +123,29 @@ This Generator delivers **highly advanced workflows for Angular 1 & Ionic 1** wi
 - [Bower component usage](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/bower_component_usage.md) in our module concept.
 - [Ionic style source](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/ionic_style_source.md), change it from CSS to Sass or vice versa.
 
-##### Quality
+###### Quality
 - [ESLint](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/eslint.md) code style checks and setting up your IDE/Editor.
 - [Testing](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/testing.md) with our testing setup.
 - [Husky hooks](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/testing_workflow.md), automatically run linting and tests before you commit.
 
-##### Advanced
+###### Advanced
 - [CORS & Proxying](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/cors_proxy.md), how to cope with CORS issues.
 - [App Icons and splash screens](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/icons_splash_screens.md), a simple setup or different sets for different builds - all is possible.
 - [Use Environments](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/environments.md) manage different API Endpoints and much more with just a single parameter.
 - [Gulp defaults](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/gulp_defaults.md), spare yourself some tedious typing on the command line.
 
 
-##### Building & Continuous Integration
+###### Building & Continuous Integration
 - [Build Vars](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/build_vars.md), inject vars into your app at build time.
 - [Programmatically change the `config.xml`](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/programmatically_change_configxml.md), with `gulp config` an essential part for a successful continuous integration setup.
 - [Full-blown Continuous Integration Guide](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/ci.md) - putting it all together: environments, build vars and `gulp config`!
 - [Greenhouse & Relution Integration Guide](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/greenhouse.md) - build and distribute your apps using these powerful cloud services
 
-##### Ecosystems
+###### Ecosystems
 - [Greenhouse & Relution](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/ecosystems/greenhouse.md) - build and distribute your apps using these powerful cloud services
 - [Ionic Cloud](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/ecosystems/ionic_platform.md) (beta) - a powerful suite of hybrid-focused mobile backend services and tools
 
-## Generator Insights
+### Generator Insights
 We've published 3 blog articles on our company blog delivering deep insights into the why and how of the generator:
 - September 2015: [Generator-M-Ionic and the search for the holy grail](http://blog.mwaysolutions.com/2015/09/21/generator-m-ionic-and-the-search-for-the-holy-grail/)
   - rather **technical comparison** between the generator and similar tools as well as technical insights to the **decisions and motivation** behind the generator
@@ -151,18 +155,18 @@ We've published 3 blog articles on our company blog delivering deep insights int
   - the **origins** of the generator development and **company strategy**
 
 
-## Questions, issues? Talk to us!
+### Questions, issues? Talk to us!
 Do the following:
  1. check out our [Issue Guidelines](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/contribute/issue_guide.md) and [issues](https://github.com/mwaylabs/generator-m-ionic/issues) to see if there already is a solution or answer.
  2. [![Join the chat at https://gitter.im/mwaylabs/generator-m-ionic](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mwaylabs/generator-m-ionic?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) - Get in touch with other developers and our core team.
  3. If all fails, make sure you have read the [Issue Guidelines](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/contribute/issue_guide.md) **first** and then [open a new issue](https://github.com/mwaylabs/generator-m-ionic/issues/new).
 
-## Want to contribute ideas, code?
+### Want to contribute ideas, code?
 Start by reading our:
 
 1. [Mission Statement](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/contribute/mission_statement.md)
 2. [Contribution Guide](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/contribute/contribution_guide.md)
 
 
-## License
+### License
 Code licensed under MIT. Docs under Apache 2. PhoneGap is a trademark of Adobe.
