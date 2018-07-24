@@ -1,8 +1,15 @@
 # MadStone
 
-Download [](https://play.google.com/store/apps/details?id=com.jorge.madstone)
+Download [Google Play](https://play.google.com/store/apps/details?id=com.jorge.madstone)
 
 
+
+
+
+
+
+
+# Readme gerado pelo Generator
 This project was generated with Generator-M-Ionic v1.12.0. For more info visit the [repository](https://github.com/mwaylabs/generator-m-ionic) or check out the README below.
 
 ## Generator-M-Ionic v1.12.0
