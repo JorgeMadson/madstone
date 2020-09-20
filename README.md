@@ -1,11 +1,17 @@
 # MadStone
 
+To Run:
+* npm install
+* npm i -g yo gulp bower
+* bower install
+* gulp watch
+
+To fix this 'ReferenceError: internalBinding is not defined':
+
+https://github.com/gulpjs/gulp/issues/2246#issuecomment-435646661
+
+
 Download [Google Play](https://play.google.com/store/apps/details?id=com.jorge.madstone)
-
-
-
-
-
 
 
 
